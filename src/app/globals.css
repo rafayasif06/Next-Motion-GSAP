@@ -1,34 +1,7 @@
 @import "tailwindcss";
 
-
-/* @font-face {
-  font-family: 'teodor';
-  src: url('../assets/fonts/Teodor-Regular.DWUeTY31.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+@theme {
+  --font-teodor: var(--font-teodor);
+  --font-nHaas55: var(--font-nHaas55);
+  --font-nHaas65: var(--font-nHaas65);
 }
-
-@font-face {
-  font-family: 'NHaasGroteskTXPro-regular';
-  src: url('../assets/fonts/NHaasGroteskTXPro-55Rg.DjjIn3vU.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'NHaasGroteskTXPro-medium';
-  src: url('../assets/fonts/NHaasGroteskTXPro-65Md.obxsJaSp.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-.font-NHaasGroteskTXPro-regular {
-  font-family: NHaasGroteskTXPro-regular;
-}
-
-.font-NHaasGroteskTXPro-medium {
-  font-family: NHaasGroteskTXPro-medium;
-} */

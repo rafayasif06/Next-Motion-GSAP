@@ -136,7 +136,7 @@ export const Header = ({ initialState, toggleMenuFunction }) => {
             ref={menuTextRef}
             className={` ${
               initialState ? "-translate-y-[100%]" : "translate-y-0"
-            }  absolute left-0 top-0 duration-300 transition-all  mc-button font-NHaasGroteskTXPro-medium leading-none text-[1rem] 2xl:text-[1vw] text-white`}
+            }  absolute left-0 top-0 duration-300 transition-all  mc-button font-nHaas65 leading-none text-[1rem] 2xl:text-[1vw] text-white`}
           >
             MENU
           </h3>
@@ -144,14 +144,14 @@ export const Header = ({ initialState, toggleMenuFunction }) => {
             ref={closeTextRef}
             className={` ${
               initialState ? "translate-y-0" : "translate-y-[100%]"
-            }  duration-300 transition-transform left-0 mc-button font-NHaasGroteskTXPro-medium leading-none text-[1rem]  2xl:text-[1vw] text-white`}
+            }  duration-300 transition-transform left-0 mc-button font-nHaas65 leading-none text-[1rem]  2xl:text-[1vw] text-white`}
           >
             CLOSE
           </h3>
-          {/* <h3 className={`mc-button font-NHaasGroteskTXPro-medium leading-none text-[1rem] group-hover:-translate-y-8 2xl:text-[1vw] text-white`}>
+          {/* <h3 className={`mc-button font-nHaas65 leading-none text-[1rem] group-hover:-translate-y-8 2xl:text-[1vw] text-white`}>
             MENU
           </h3>
-          <h3 className="mc-button font-NHaasGroteskTXPro-medium leading-none text-[1rem] group-hover:-translate-y-4  2xl:text-[1vw] text-white">
+          <h3 className="mc-button font-nHaas65 leading-none text-[1rem] group-hover:-translate-y-4  2xl:text-[1vw] text-white">
             CLOSE
           </h3> */}
         </button>
@@ -187,7 +187,7 @@ export const Header = ({ initialState, toggleMenuFunction }) => {
               ref={inquireLeftArrowRef}
               className="fa-solid fa-arrow-right leftArrow opacity-0 translate-x-4 inqurie-right-arrow ri-arrow-right-line text-[1rem] 2xl:text-[1vw] text-white font-[500] mr-[1vw]"
             ></i>
-            <h3 className="uppercase font-NHaasGroteskTXPro-medium  text-white text-[1rem]  2xl:text-[1vw]">
+            <h3 className="uppercase font-nHaas65  text-white text-[1rem]  2xl:text-[1vw]">
               Inquire
             </h3>
           </div>

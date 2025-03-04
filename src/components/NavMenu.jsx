@@ -11,7 +11,6 @@ import { motion } from "motion/react";
 import NavMenuLinks from "./NavMenuLinks";
 import Footer from "./Footer";
 export default function NavMenu({ initialState }) {
-  console.log(`initialState is ${initialState ? "true" : "false"}`);
   const imageRef = useRef();
   useGSAP(() => {
     if (initialState === true) {
@@ -44,8 +43,6 @@ export default function NavMenu({ initialState }) {
   };
 
   const containerRef = useRef();
-
-  console.log(initialState);
 
   return (
     <motion.div
