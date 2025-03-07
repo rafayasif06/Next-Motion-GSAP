@@ -9,7 +9,7 @@ import Image from "next/image";
 import { CustomEase } from "gsap/CustomEase";
 import { motion } from "motion/react";
 import NavMenuLinks from "./NavMenuLinks";
-import Footer from "./Footer";
+import HomeFooter from "./HomeFooter";
 export default function NavMenu({ initialState }) {
   const imageRef = useRef();
   useGSAP(() => {
@@ -75,7 +75,7 @@ export default function NavMenu({ initialState }) {
         </div>
         {/* NavMenu links  */}
         <NavMenuLinks initialState={initialState} />
-        <Footer initialState= {initialState} />
+        <HomeFooter initialState= {initialState} />
       </div>
     </motion.div>
   );
