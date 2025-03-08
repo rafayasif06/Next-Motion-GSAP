@@ -13,6 +13,7 @@ export const communityData = [
         name: "Front Garage Collection",
         type: "Single Family",
         price: "From $551,800",
+        invisible: false,
         houseDetail: [
           { text: "3-5", icon: <FaBed /> },
           {
@@ -29,6 +30,7 @@ export const communityData = [
         name: "Loned Collection",
         type: "Single Family",
         price: "From $479,000",
+        invisible: false,
         houseDetail: [
           { text: "3-5", icon: <FaBed /> },
           {
@@ -45,6 +47,7 @@ export const communityData = [
         name: "Duplex Collection",
         type: "Single Family",
         price: "From $447,270",
+        invisible: false,
         houseDetail: [
           { text: "3-5", icon: <FaBed /> },
           {
@@ -69,6 +72,7 @@ export const communityData = [
         name: "Loned Collection",
         type: "Single Family",
         price: "From $453,921",
+        invisible: false,
         houseDetail: [
           { text: "3-5", icon: <FaBed /> },
           {
@@ -85,6 +89,7 @@ export const communityData = [
         name: "Front Garage Collection",
         type: "Single Family",
         price: "From $479,000",
+        invisible: true,
         houseDetail: [
           { text: "3-5", icon: <FaBed /> },
           {
@@ -101,6 +106,7 @@ export const communityData = [
         name: "Duplex Collection",
         type: "Single Family",
         price: "From $447,270",
+        invisible: true,
         houseDetail: [
           { text: "3-5", icon: <FaBed /> },
           {
@@ -125,6 +131,7 @@ export const communityData = [
         name: "Front Garage Collection",
         type: "Single Family",
         price: "From $551,800",
+        invisible: false,
         houseDetail: [
           { text: "3-5", icon: <FaBed /> },
           {
@@ -141,6 +148,7 @@ export const communityData = [
         name: "Loned Collection",
         type: "Single Family",
         price: "From $479,000",
+        invisible: false,
         houseDetail: [
           { text: "3-5", icon: <FaBed /> },
           {
@@ -157,6 +165,184 @@ export const communityData = [
         name: "Duplex Collection",
         type: "Single Family",
         price: "From $447,270",
+        invisible: false,
+        houseDetail: [
+          { text: "3-5", icon: <FaBed /> },
+          {
+            text: "3",
+            icon: <FaBath />,
+          },
+          {
+            text: "1.424-1.777 ft²",
+            icon: <FaPersonShelter />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Chappelle Gardens Community",
+    location: "in Southwest Edmonton",
+    image: "/community/details-01.jpg",
+
+    collections: [
+      {
+        name: "Front Garage Collection",
+        type: "Single Family",
+        price: "From $551,800",
+        invisible: false,
+        houseDetail: [
+          { text: "3-5", icon: <FaBed /> },
+          {
+            text: "3",
+            icon: <FaBath />,
+          },
+          {
+            text: "1.843-2.484 ft²",
+            icon: <FaPersonShelter />,
+          },
+        ],
+      },
+      {
+        name: "Loned Collection",
+        type: "Single Family",
+        price: "From $479,000",
+        invisible: false,
+        houseDetail: [
+          { text: "3-5", icon: <FaBed /> },
+          {
+            text: "3",
+            icon: <FaBath />,
+          },
+          {
+            text: "1.420-1.748 ft²",
+            icon: <FaPersonShelter />,
+          },
+        ],
+      },
+      {
+        name: "Duplex Collection",
+        type: "Single Family",
+        price: "From $447,270",
+        invisible: false,
+        houseDetail: [
+          { text: "3-5", icon: <FaBed /> },
+          {
+            text: "3",
+            icon: <FaBath />,
+          },
+          {
+            text: "1.424-1.777 ft²",
+            icon: <FaPersonShelter />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Edgemont Community",
+    location: "in west Edmonton",
+    image: "/community/details-03.jpg",
+
+    collections: [
+      {
+        name: "Loned Collection",
+        type: "Single Family",
+        price: "From $453,921",
+        invisible: false,
+        houseDetail: [
+          { text: "3-5", icon: <FaBed /> },
+          {
+            text: "3",
+            icon: <FaBath />,
+          },
+          {
+            text: "1.420-1748 ft²",
+            icon: <FaPersonShelter />,
+          },
+        ],
+      },
+      {
+        name: "Front Garage Collection",
+        type: "Single Family",
+        price: "From $479,000",
+        invisible: true,
+        houseDetail: [
+          { text: "3-5", icon: <FaBed /> },
+          {
+            text: "3",
+            icon: <FaBath />,
+          },
+          {
+            text: "1.420-1.748 ft²",
+            icon: <FaPersonShelter />,
+          },
+        ],
+      },
+      {
+        name: "Duplex Collection",
+        type: "Single Family",
+        price: "From $447,270",
+        invisible: true,
+        houseDetail: [
+          { text: "3-5", icon: <FaBed /> },
+          {
+            text: "3",
+            icon: <FaBath />,
+          },
+          {
+            text: "1.424-1.777 ft²",
+            icon: <FaPersonShelter />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Paisley Community",
+    location: "in Southwest Edmonton",
+    image: "/community/details-12.jpg",
+
+    collections: [
+      {
+        name: "Front Garage Collection",
+        type: "Single Family",
+        price: "From $551,800",
+        invisible: false,
+        houseDetail: [
+          { text: "3-5", icon: <FaBed /> },
+          {
+            text: "3",
+            icon: <FaBath />,
+          },
+          {
+            text: "1.843-2.484 ft²",
+            icon: <FaPersonShelter />,
+          },
+        ],
+      },
+      {
+        name: "Loned Collection",
+        type: "Single Family",
+        price: "From $479,000",
+        invisible: false,
+        houseDetail: [
+          { text: "3-5", icon: <FaBed /> },
+          {
+            text: "3",
+            icon: <FaBath />,
+          },
+          {
+            text: "1.420-1.748 ft²",
+            icon: <FaPersonShelter />,
+          },
+        ],
+      },
+      {
+        name: "Duplex Collection",
+        type: "Single Family",
+        price: "From $447,270",
+        invisible: false,
         houseDetail: [
           { text: "3-5", icon: <FaBed /> },
           {

@@ -14,6 +14,8 @@ const Community = () => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1200,
@@ -71,17 +73,17 @@ const Community = () => {
                   </div>
                 </div>
                 {/* Lower section */}
-                <div className="flex flex-col px-4 py-5 w-full ">
+                <div className="flex-1 h-full flex flex-col px-4 py-5 w-full ">
                   <div className="flex flex-col justify-start  w-full">
-                    <h4 className="text-lg font-semibold text-communityDarkBlue ">
+                    <h4 className="text-lg font-bold text-communityExtraDarkBlue">
                       {data.name}
                     </h4>
-                    <p className="text-base text-gray-700">{data.location}</p>
+                    <p className="text-base text-gray-700 pt-2">{data.location}</p>
                   </div>
                   {data.collections.map((collection, index) => (
                     <div
                       key={index}
-                      className="flex flex-col gap-1 font-medium  "
+                      className={`flex flex-col font-medium pt-3 ${collection.invisible ? "invisible" : ""}`}
                     >
                       <div className="flex whitespace-nowrap flex-wrap gap-x-1 text-sm  ">
                         <Link href={"/"}>
@@ -98,7 +100,7 @@ const Community = () => {
                           <div key={index} className="flex">
                             <Link
                               href={"/"}
-                              className="flex items-center justify-center gap-1 font-semibold text-base text-[#003666]"
+                              className="flex items-center justify-center gap-1 font-semibold text-base text-communityDarkBlue"
                             >
                               <span>{item.icon}</span>
                               <span>{item.text}</span>
