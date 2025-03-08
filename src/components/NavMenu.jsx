@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { CustomEase } from "gsap/CustomEase";
 import { motion } from "motion/react";
@@ -12,6 +12,7 @@ import NavMenuLinks from "./NavMenuLinks";
 import HomeFooter from "./HomeFooter";
 export default function NavMenu({ initialState }) {
   const imageRef = useRef();
+  
   useGSAP(() => {
     if (initialState === true) {
       gsap.set(imageRef.current, { y: "100%" });
@@ -22,6 +23,13 @@ export default function NavMenu({ initialState }) {
       });
     }
   });
+  useEffect(() => {
+    if (initialState === true) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [initialState]);
 
   const menuVariants = {
     open: {
@@ -51,12 +59,12 @@ export default function NavMenu({ initialState }) {
       initial="closed"
       animate={initialState ? "open" : "closed"}
       style={{ transformOrigin: "top" }}
-      className={`bg-[#7C7262] min-h-screen flex `}
+      className={`bg-[#7C7262] min-h-screen flex flex-col overflow-hidden`}
     >
       <div
-        className={`flex  flex-start md:gap-[4vw] lg:gap-0 py-[1rem] xl:py-[1vw] w-full overflow-hidden mt-48 ml-8 z-50  `}
+        className={`flex flex-col md:flex-row md:gap-[4vw] lg:gap-0 py-[1rem] xl:py-[1vw] w-full overflow-hidden mt-48 ml-8 z-50`}
       >
-        <div className=" md:block w-[45%] p-[1px] h-[50vw] lg:h-[33vw] relative overflow-hidden ">
+        <div className="md:block hidden w-[45%] p-[1px] h-[50vw] lg:h-[33vw] relative overflow-hidden">
           <div className="nav-image-cover absolute top-0 left-0 -translate-y-[100%] h-full w-full lg:w-[61%] bg-[#7C7262]"></div>
           {/*  NavMenu Image */}
           <motion.div
@@ -75,7 +83,7 @@ export default function NavMenu({ initialState }) {
         </div>
         {/* NavMenu links  */}
         <NavMenuLinks initialState={initialState} />
-        <HomeFooter initialState= {initialState} />
+        <HomeFooter initialState={initialState} />
       </div>
     </motion.div>
   );

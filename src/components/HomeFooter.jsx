@@ -35,8 +35,8 @@ const HomeFooter = ({ initialState }) => {
   });
   return (
     <>
-      <div className="absolute bottom-[17vw] md:bottom-[4vw] lg:bottom-[1rem] left-0 w-[100%] px-[5.5vw] md:px-[1rem] flex justify-end">
-        <div className="info-container w-full lg:w-[55%] flex justify-between items-center text-[4vw] md:text-[2vw] lg:text-[1vw] text-white">
+      <div className="absolute bottom-[5%]  lg:bottom-[1rem] left-0 w-[100%] px-[6.5vw] md:px-[1rem] flex justify-end">
+        <div className="info-container w-full lg:w-[55%] flex justify-between items-center text-sm sm:text-base  text-white">
           <div className="flex items-center gap-[5vw] lg:gap-[1.5vw]">
             <div className="b-info overflow-hidden font-nHaas65 relative">
               <Link href="#">LEGAL</Link>
@@ -49,7 +49,7 @@ const HomeFooter = ({ initialState }) => {
             </div>
           </div>
 
-          <div className="b-info overflow-hidden text-[5.5vw] md:text-[3.3vw] lg:text-[1.6vw] relative">
+          <div className="b-info overflow-hidden text-2xl md:text-3xl relative">
             <Link href="#" className="">
               212-935-5757
             </Link>

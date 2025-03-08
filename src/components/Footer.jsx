@@ -9,7 +9,7 @@ const Footer = () => {
   <div className='w-full max-w-[1550px] mx-auto flex flex-col '>
     <FirstComp/>
     <SecondComp/>
-    {/* <ThirdComp/> */}
+    <ThirdComp/>
 
   </div>
 </section>  )

@@ -21,12 +21,6 @@ const carouselText = [
 ];
 
 const SecondComp = () => {
-  const footerLinks = [
-    { id: 1, text: "Datenschutzerklärung", url: "#" },
-    { id: 2, text: "Impressum", url: "#" },
-    { id: 3, text: "© CROWND Estates GmbH", isText: true },
-    { id: 4, text: "Datenschutzeinstellungen", url: "#" },
-  ];
   var settings = {
     dots: false,
     arrows: false,
@@ -69,7 +63,8 @@ const SecondComp = () => {
         <Slider {...settings}>
           {carouselImages.map((image, index) => (
             <div key={index} className=" overflow-hidden relative group">
-              <div>
+              <div className="relative">
+                <div className="absolute left-0 top-0 w-full h-full bg-black/40 z-10"/>
                 <Image
                   src={carouselImages[index]}
                   alt="carousel"
@@ -78,7 +73,7 @@ const SecondComp = () => {
                   className="group-hover:scale-110 duration-500 transition-transform"
                 />
               </div>
-              <div className="absolute bottom-[5%] group-hover:bottom-[13%] transition-all duration-500 right-[7%]">
+              <div className="absolute bottom-[5%] group-hover:bottom-[13%] transition-all duration-500 right-[7%] z-20">
                 <Image
                   src={carouselText[index]}
                   alt="carousel hover"
@@ -86,33 +81,14 @@ const SecondComp = () => {
                   height={100}
                 />
               </div>
-              <div></div>
-              <div className="absolute bottom-[5%] group-hover:opacity-100 opacity-0 transition-all duration-500 right-[7%]">
-                <p className="font-medium text-white text-left">
+              <div className="absolute bottom-[5%] z-20 group-hover:opacity-100 opacity-0 transition-all duration-500 right-[7%]">
+                <p className="font-medium text-white text-left ">
                   Herklotzgasse 42.1150 Wien
                 </p>
               </div>
             </div>
           ))}
         </Slider>
-      </div>
-      <div className="px-14 pt-14">
-        <h2 className="text-2xl text-black font-normal font-serif">
-          It's my life. It's my style. It's CROWND.
-        </h2>
-        <ul className="pt-9">
-          {footerLinks.map((link) => (
-            <li key={link.id} className="inline-block pr-5">
-              {link.isText ? (
-                <p className="text-sm text-gray-500">{link.text}</p>
-              ) : (
-                <a href={link.url} className="text-sm text-gray-500">
-                  {link.text}
-                </a>
-              )}
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   );

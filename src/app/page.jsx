@@ -1,10 +1,10 @@
 "use client";
+import Community from "@/components/Community";
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import NavMenu from "@/components/NavMenu";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useState } from "react";
-
 export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -15,7 +15,8 @@ export default function Page() {
     <>
       <Header initialState={isMenuOpen} toggleMenuFunction={toggleMenu} />
       <NavMenu initialState={isMenuOpen} />
-      <Footer/>
+      <Community/>
+      <Footer />
 
       <video
         className="absolute top-0 left-0 w-full h-full object-cover -z-99"
