@@ -17,7 +17,7 @@ const FirstComp = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 px-4 md:px-8 lg:px-12 md:gap-0 pb-12 gap-8 ">
       {/* First */}
       <div className="flex flex-col gap-8">
-        <h3 className="text-3xl font-semibold md:text-4xl">Stay up to date.</h3>
+        <h3 className="font-ptSerif text-3xl md:text-4xl">Stay up to date.</h3>
         <div className="flex items-center bg-white rounded-full shadow-md px-4 py-2 w-80">
           <input
             type="email"
@@ -28,7 +28,7 @@ const FirstComp = () => {
             <Image width={100} height={100} src="/footer/submit.png" alt="" />
           </button>
         </div>
-        <div className="flex gap-2 mt-4">
+        <div className="flex gap-4 mt-4">
           {socialLinks.map((link, index) => (
             <Link key={index} href={"/"}>
               <button className=" cursor-pointer bg-white flex items-center justify-center rounded-full">
@@ -41,7 +41,7 @@ const FirstComp = () => {
         </div>
       </div>
       {/* Second */}
-      <ul className="flex flex-col md:gap-4  text-lg">
+      <ul className="flex flex-col md:gap-4  text-lg font-roboto">
         {footerLinks.map((footerLink, index) => (
           <Link href="#" key={index}>
             <li className="text-[#333333] px2 hover:text-[#3333337a] font-medium">
@@ -51,21 +51,19 @@ const FirstComp = () => {
         ))}
       </ul>
       {/* Third */}
-      <div>
+      <div className="font-roboto font-normal">
         <ul className="flex flex-col gap-4 text-lg">
           {data.map((item, index) => (
             <li
               key={index}
-              className="flex flex-col items-start font-medium gap-2"
-            >
+              className="flex flex-col items-start gap-2">
               <span className="text-[#333333]">{item.line1}</span>
               <ul className="flex gap-2 flex-col ">
                 {item.line2.map((line, index) => (
                   <li
                     key={index}
-                    className="text-[#33333389] hover:underline text-lg decoration-[#33333389] 
- "
-                  >
+                    className="text-[#979797] hover:underline text-lg decoration-[#979797] 
+ ">
                     <Link href="/">{line}</Link>
                   </li>
                 ))}

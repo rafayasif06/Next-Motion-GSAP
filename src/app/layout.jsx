@@ -1,6 +1,20 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
 import localFont from "next/font/local";
+import { PT_Serif, Roboto } from "next/font/google";
+
+const ptSerif = PT_Serif({
+  weight: ["400"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-ptSerif",
+});
+const roboto = Roboto({
+  weight: ["400", "500"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
 
 const teodor = localFont({
   src: [
@@ -36,7 +50,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased ${teodor.variable} ${nHaas55.variable} ${nHaas65.variable} font-teodor`}>
+        className={`antialiased ${roboto.variable} ${ptSerif.variable} ${teodor.variable} ${nHaas55.variable} ${nHaas65.variable} font-teodor`}>
         {children}
       </body>
     </html>

@@ -58,7 +58,7 @@ const SecondComp = () => {
     ],
   };
   return (
-    <div className="">
+    <div className="font-roboto">
       <div className="">
         <Slider {...settings}>
           {carouselImages.map((image, index) => (

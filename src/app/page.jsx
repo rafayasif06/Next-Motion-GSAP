@@ -13,13 +13,9 @@ export default function Page() {
 
   return (
     <>
-      <Header initialState={isMenuOpen} toggleMenuFunction={toggleMenu} />
-      <NavMenu initialState={isMenuOpen} />
-      <Community/>
-      <Footer />
 
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover -z-99"
+        className="h-screen w-full object-cover"
         autoPlay
         loop
         muted
@@ -28,6 +24,10 @@ export default function Page() {
         <source src="/home-hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <Header initialState={isMenuOpen} toggleMenuFunction={toggleMenu} />
+      <NavMenu initialState={isMenuOpen} />
+      <Community/>
+      <Footer />
     </>
   );
 }

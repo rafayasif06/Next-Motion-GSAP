@@ -59,7 +59,7 @@ export default function NavMenu({ initialState }) {
       initial="closed"
       animate={initialState ? "open" : "closed"}
       style={{ transformOrigin: "top" }}
-      className={`bg-[#7C7262] min-h-screen flex flex-col overflow-hidden`}
+      className={`z-[30] bg-[#7C7262] min-h-screen flex flex-col overflow-hidden fixed top-0 left-0 bottom-0 right-0`}
     >
       <div
         className={`flex flex-col md:flex-row md:gap-[4vw] lg:gap-0 py-[1rem] xl:py-[1vw] w-full overflow-hidden mt-48 ml-8 z-50`}
