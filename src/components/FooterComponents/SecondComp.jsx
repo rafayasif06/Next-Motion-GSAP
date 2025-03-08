@@ -24,9 +24,11 @@ const SecondComp = () => {
   var settings = {
     dots: false,
     arrows: false,
-    infinite: false,
+    infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
