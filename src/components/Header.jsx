@@ -2,7 +2,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assets/images/logo-horizontal-light.svg";
+import logoLight from "@/assets/images/logo-horizontal-light.svg";
+import logoDark from "@/assets/images/logo-horizontal-dark.svg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { CustomEase } from "gsap/CustomEase";
@@ -128,7 +129,7 @@ export const Header = ({ initialState, toggleMenuFunction }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= window.innerHeight *0.6) {
+      if (window.scrollY >= window.innerHeight * 0.6) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -151,8 +152,7 @@ export const Header = ({ initialState, toggleMenuFunction }) => {
       <div
         ref={hamMenuLRef}
         onClick={toggleMenuFunction}
-        className={` hamburger-menu cursor-pointer  group flex items-center gap-[1rem] 2xl:gap-[1vw]`}
-      >
+        className={` hamburger-menu cursor-pointer  group flex items-center gap-[1rem] 2xl:gap-[1vw]`}>
         <div className="hamburger-menu-lines ">
           <motion.div
             animate={{ backgroundColor: isVisible ? "#7C7262" : "white" }}
@@ -176,8 +176,7 @@ export const Header = ({ initialState, toggleMenuFunction }) => {
             ref={menuTextRef}
             className={` ${
               initialState ? "-translate-y-[100%]" : "translate-y-0"
-            }  absolute left-0 top-0 duration-300 transition-all  mc-button font-nHaas65 leading-none text-[1rem] 2xl:text-[1vw] `}
-          >
+            }  absolute left-0 top-0 duration-300 transition-all  mc-button font-nHaas65 leading-none text-[1rem] 2xl:text-[1vw] `}>
             MENU
           </motion.h3>
           <motion.h3
@@ -185,8 +184,7 @@ export const Header = ({ initialState, toggleMenuFunction }) => {
             ref={closeTextRef}
             className={` ${
               initialState ? "translate-y-0" : "translate-y-[100%]"
-            }  duration-300 transition-transform left-0 mc-button font-nHaas65 leading-none text-[1rem]  2xl:text-[1vw] text-white`}
-          >
+            }  duration-300 transition-transform left-0 mc-button font-nHaas65 leading-none text-[1rem]  2xl:text-[1vw] text-white`}>
             CLOSE
           </motion.h3>
           {/* <h3 className={`mc-button font-nHaas65 leading-none text-[1rem] group-hover:-translate-y-8 2xl:text-[1vw] text-white`}>
@@ -201,7 +199,7 @@ export const Header = ({ initialState, toggleMenuFunction }) => {
       <div className="absolute left-[1rem] md:top-[50%] md:left-[50%] md:-translate-y-[50%] md:-translate-x-[50%] w-[28vw] md:w-[7.5rem]">
         <Link href="/">
           <Image
-            src={logo}
+            src={isVisible ? logoDark : logoLight}
             alt="111 West 57th Street logo"
             width={200}
             height={50}
@@ -215,28 +213,23 @@ export const Header = ({ initialState, toggleMenuFunction }) => {
         <motion.div
           ref={inquireButtonRef}
           animate={{ borderColor: isVisible ? "#7C7262" : "white" }}
-          className=" hidden md:flex relative group: items-center justify-center gap-[5rem] border-[1px] border-[#fff] rounded-[0.2rem] py-[0.5rem] overflow-hidden"
-        >
+          className=" hidden md:flex relative group: items-center justify-center gap-[5rem] border-[1px] border-[#fff] rounded-[0.2rem] py-[0.5rem] overflow-hidden">
           <div
             ref={inquireBoxRef}
-            className=" inline-flex items-center justify-center inquireBox  z-[40]  gap-[0.8vw]"
-          >
+            className=" inline-flex items-center justify-center inquireBox  z-[40]  gap-[0.8vw]">
             <i
               ref={inquireLeftArrowRef}
-              className="fa-solid fa-arrow-right leftArrow opacity-0 translate-x-4 inqurie-right-arrow ri-arrow-right-line text-[1rem] 2xl:text-[1vw] text-white font-[500] mr-[1vw]"
-            ></i>
+              className="fa-solid fa-arrow-right leftArrow opacity-0 translate-x-4 inqurie-right-arrow ri-arrow-right-line text-[1rem] 2xl:text-[1vw] text-white font-[500] mr-[1vw]"></i>
             <motion.h3
               animate={{ color: isVisible ? "#7C7262" : "white" }}
-              className="uppercase font-nHaas65  text-white text-[1rem]  2xl:text-[1vw]"
-            >
+              className="uppercase font-nHaas65  text-white text-[1rem]  2xl:text-[1vw]">
               Inquire
             </motion.h3>
           </div>
           <motion.i
             animate={{ color: isVisible ? "#7C7262" : "white" }}
             ref={inquireRightArrowRef}
-            className="fa-solid fa-arrow-right inqurie-right-arrow ri-arrow-right-line text-[1rem] 2xl:text-[1vw] text-white font-[500] mr-[1vw]"
-          ></motion.i>
+            className="fa-solid fa-arrow-right inqurie-right-arrow ri-arrow-right-line text-[1rem] 2xl:text-[1vw] text-white font-[500] mr-[1vw]"></motion.i>
 
           <div className="white-plate z-[30] h-full w-full  absolute top-0 left-0 bg-white translate-y-[100%] " />
         </motion.div>
