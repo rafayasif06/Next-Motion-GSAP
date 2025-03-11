@@ -62,7 +62,7 @@ export default function NavMenu({ initialState }) {
       className={`z-[30] bg-[#7C7262] min-h-screen flex flex-col overflow-hidden fixed top-0 left-0 bottom-0 right-0`}
     >
       <div
-        className={`flex flex-col md:flex-row md:gap-[4vw] lg:gap-0 py-[1rem] xl:py-[1vw] w-full overflow-hidden mt-48 ml-8 z-50`}
+        className={`flex flex-col md:flex-row md:gap-[4vw] lg:gap-0 py-[1rem] xl:py-[1vw] w-full overflow-hidden mt-32 ml-8 z-50`}
       >
         <div className="md:block hidden w-[45%] p-[1px] h-[50vw] lg:h-[33vw] relative overflow-hidden">
           <div className="nav-image-cover absolute top-0 left-0 -translate-y-[100%] h-full w-full lg:w-[61%] bg-[#7C7262]"></div>

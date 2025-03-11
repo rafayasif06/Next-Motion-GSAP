@@ -41,17 +41,18 @@ const NavMenuLinks = ({ initialState }) => {
   });
 
   return (
-    <div className="w-[55%] flex flex-col bg-[#7C7262] leading-none text-white list-none">
+    <div className=" w-full md:w-[55%] flex flex-col bg-[#7C7262]  leading-none  text-white list-none">
       {navLinks.map((item, index) => (
         <motion.div
           key={index}
           ref={boxRefs.current[index]}
-          className="nav-link-container"
+          className="nav-link-container overflow-hidden"
         >
           <motion.li
             initial={{ y: 60 }}
-            whileInView={{ y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            animate={{ y: initialState ? 0 : 60 }}
+            transition={{ delay: 1.4, duration: 0.5  }}
+            viewport={{once: false}}
             className="text-4xl md:text-5xl p-2"
           >
             <Link className="nav-link w-fit" href={item.href}>
